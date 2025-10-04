@@ -1,10 +1,10 @@
 
-class Transport {
+class Vehicle {
     protected String name;
     protected double speed;    
     protected double distance;  
 
-    public Transport(String name, double speed, double distance) {
+    public Vehicle(String name, double speed, double distance) {
         this.name = name;
         this.speed = speed;
         this.distance = distance;
@@ -26,19 +26,19 @@ class Transport {
     }
 }
 
-class Car extends Transport {
+class Car extends Vehicle {
     public Car(double speed, double distance) {
         super("Car", speed, distance);
     }
 }
 
-class Bicycle extends Transport {
+class Bicycle extends Vehicle {
     public Bicycle(double speed, double distance) {
         super("Bicycle", speed, distance);
     }
 }
 
-class Train extends Transport {
+class Train extends Vehicle {
     public Train(double speed, double distance) {
         super("Train", speed, distance);
     }
@@ -46,13 +46,13 @@ class Train extends Transport {
 
 public class Lab1 {
     public static void main(String[] args) {
-        Transport car = new Car(100, 250);        
-        Transport bicycle = new Bicycle(20, 50); 
-        Transport train = new Train(200, 600);   
+        Vehicle car = new Car(100, 250);        
+        Vehicle bicycle = new Bicycle(20, 50); 
+        Vehicle train = new Train(200, 600);   
 
-        Transport[] transports = {car, bicycle, train};
+        Vehicle[] Vehicles = {car, bicycle, train};
 
-        for (Transport t : transports) {
+        for (Vehicle t : Vehicles) {
             t.printInfo();
         }
     }
